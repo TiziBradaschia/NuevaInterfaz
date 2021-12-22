@@ -1,0 +1,51 @@
+
+<html lang="es">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+		<link href="css/EstiloLogin.css" rel="stylesheet"  type="text/css"  />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link rel="icon"   href="imagenes/Libro.jpeg" type="image/png" />
+		<title>Ingreso de Usuarios</title>
+		<script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+</head>	
+<main class="container alto-180 d-flex justify-content-center align-items-center vh-50 rounded" >	 
+  <body >
+		 <section class="login"><center>
+		 <Form Action="RegistroUsuario.php" Method="post">	
+		 <h1 class="text-center fs-1 fw-bolder"><img src="imagenes/L D Q.png" width="150px" height="150px"class="border border-secondary border-1 rounded-circle"> REGISTRO DE USUARIOS <img src="imagenes/L D Q.png" width="150px" height="150px"class="border border-secondary border-1 rounded-circle"></h1>
+		<br>
+		<div class="input-group mb-1">
+        <span class="input-group-text"><box-icon class="rounded-circle" name="user-circle" type="solid" size="md" color="#FAE5D3"></box-icon></span>
+		<input class="form-control" type="text" name="Dni" value="" placeholder="Ingrese su Dni"required="requerido"></div>
+		
+		<div class="input-group mb-1">
+        <span class="input-group-text"><box-icon class="rounded-circle" name="key" type="solid" size="md" color="#FAE5D3"></box-icon></span>
+		<input class="form-control" type="password" name="Clave" value="" placeholder="Ingrese una Clave">
+		</div>
+		<div class="input-group mb-1">
+        <span class="input-group-text"><box-icon class="rounded-circle" name="key" type="solid" size="md" color="#FAE5D3"></box-icon></span>
+		<input class="form-control" type="password" name="Clave1" value="" placeholder="Repita su Clave">
+		</div>
+		<center><font color="#FAE5D3">Usted es:  
+	
+				<input class="form-check-input"  type="radio" name="radio1" value="1" checked>    Cliente   
+				<input class="form-check-input" type="radio" name="radio1" value="2" >Empleado<form-check-label> 
+				</p>
+				<table align="center" border="0" cellspacing="0" cellpadding="0" width="100%">
+		
+	<tr align="center" valign="top">
+	<td>
+		<button type="submit" class="botoncito1"><box-icon class="border border-secondary border-3 rounded-circle" name="user-check" type="solid" size="lg" color="#FAE5D3" animation="tada"></box-icon>  Confirmar </button>
+		</form>
+		
+		</td>
+		<td>
+	    <Form Action="Index.html" Method="Post">
+		<button type="submit" class="botoncito1"><box-icon class="border border-secondary border-3 rounded-circle" name="arrow-back" type="solid" size="lg" color="#FAE5D3" animation="tada-hover"></box-icon> Retornar </button>
+				</form>
+		</td>
+		</tr>
+	</section>
+	</body>
+	</html></main>
