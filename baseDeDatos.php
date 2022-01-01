@@ -1,4 +1,36 @@
 <?php
+function selectClave($Dni,$Contra){
+	$consultaClave="Select * from password where Dni='".$Dni."' and Password= '".$Contra."'";
+	$SqlClave=mysqli_query(conectar(),$consultaClave);
+	return $SqlClave;
+}
+function selectCliente($Dni){
+	$consultaCliente="Select * from clienteexterno where Dni_Cliente='$Dni'";
+    $SqlCliente=mysqli_query(conectar(),$consultaCliente);
+	return $SqlCliente;
+}
+function selectClienteMail($Dni,$Mail){
+	$consultaCliente=$consulta="Select * from clienteexterno where Dni_Cliente= '".$Dni."' and Mail_Cliente= '".$Mail."'";
+    $SqlCliente=mysqli_query(conectar(),$consultaCliente);
+	return $SqlCliente;
+}
+function selectEmpleado($Dni){
+	$consultaEmpleado="Select * from personalreclamo where Dni_Personal='$Dni'";
+    $SqlEmpleado=mysqli_query(conectar(),$consultaEmpleado);
+	return $SqlEmpleado;
+	     
+}
+function selectArea($Dni)
+{
+	$SqlArea="SELECT area.Nombre_Area 
+			        FROM personalreclamo 
+					INNER JOIN area ON personalreclamo.Area=area.Cod_Area
+					WHERE Dni_Personal='$Dni'";
+	$SArea=mysqli_fetch_array(mysqli_query(conectar(),$SqlArea));	
+	$Area=$SArea['Nombre_Area'];
+    return $Area;	
+}
+
 function selectReclamo($Dni)
 
 {   echo'<tr><td><font color="#808080" size="5">N&uacutemero de reclamo:</td>';
@@ -14,7 +46,7 @@ function selectReclamo($Dni)
 	echo"</Select></td></tr>";
 	echo"<tr></tr>";
 }
-function selectArea()
+function printArea()
 {  
      echo"<tr><td><font color='#808080' size='4.5'>Por Area:</td>";
      echo "<td><Select name='Area'>";
@@ -92,4 +124,5 @@ function selectEstado()
 	echo"<tr></tr>";
 	
 }
+
 ?>

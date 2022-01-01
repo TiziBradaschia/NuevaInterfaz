@@ -7,7 +7,7 @@
 	<body>
 	    <section class="general">
 	<?php
-	    require ("Utiles/ConexionLDQ.php");
+	    require ("includes/ConexionLDQ.php");
 	    $idCone=Conectar();
         $D=$_REQUEST['Dni'];
         $C1=$_REQUEST['Clave'];
