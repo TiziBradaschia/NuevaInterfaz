@@ -25,7 +25,7 @@
 		<table>
 		 <tr>
 		    <td>
-             <Form Action="DatosPersonales.php" Method="Post">
+             <Form Action="MisDatos.php" Method="Post">
 			 <button type="submit" class="botoncito1"><box-icon class="border border-secondary border-3 rounded-circle" name="face" type="solid" size="lg" color="#FAE5D3" animation="tada"></box-icon> Mis datos</button></form>
 		<?Php if ($Tipo=='A'||$Tipo=='E'){
 				echo'<Form Action="ConsultasGenerales.php" Method="Post">

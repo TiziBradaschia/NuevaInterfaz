@@ -4,8 +4,18 @@ function selectClave($Dni,$Contra){
 	$SqlClave=mysqli_query(conectar(),$consultaClave);
 	return $SqlClave;
 }
+function selectSoloClave($Dni){
+	$consultaClave="Select * from password where Dni='$Dni'";
+	$SqlClave=mysqli_query(conectar(),$consultaClave);
+	return $SqlClave;
+}
 function selectCliente($Dni){
 	$consultaCliente="Select * from clienteexterno where Dni_Cliente='$Dni'";
+    $SqlCliente=mysqli_query(conectar(),$consultaCliente);
+	return $SqlCliente;
+}
+function consultaCliente($Dni){
+	$consultaCliente="Select * from cliente where Dni_Cliente='$Dni'";
     $SqlCliente=mysqli_query(conectar(),$consultaCliente);
 	return $SqlCliente;
 }
@@ -19,6 +29,46 @@ function selectEmpleado($Dni){
     $SqlEmpleado=mysqli_query(conectar(),$consultaEmpleado);
 	return $SqlEmpleado;
 	     
+}
+function consultaEmpleado($Dni){
+	$consultaEmpleado="Select * from empleado where Dni_Personal='$Dni'";
+    $SqlEmpleado=mysqli_query(conectar(),$consultaEmpleado);
+	return $SqlEmpleado;
+	     
+}
+function selectEmpleadoMail($Dni,$Mail){
+	$consultaEmpleado=$consulta="Select * from personalreclamo where Dni_Personal= '".$Dni."' and Mail_Personal= '".$Mail."'";
+    $SqlEmpleado=mysqli_query(conectar(),$consultaEmpleado);
+	return $SqlEmpleado;
+}
+function InsertPasword($Dni,$C1,$Tipo)
+{  $Sql="Insert into password(Dni,Password,Tipo) values ('$Dni','$C1','$Tipo')";
+   $SqlInsert=mysqli_query(conectar(),$Sql);
+    return $SqlInsert;
+}
+function UpdatePasword($codigo,$Dni){
+   $cambio="Update password set Password='$codigo' where Dni='$Dni'";
+   $SqlCambio=mysqli_query(conectar(),$cambio);
+}
+function consultaArea(){
+	$consultaArea="Select * from area ORDER BY Nombre_Area ASC";
+	$Area=mysqli_query(conectar(),$consultaArea);
+	return $Area;
+}
+function consultaBarrio(){
+	$consultaBarrio="Select * from barrio ORDER BY Nombre_Barrio ASC";
+	$Barrio=mysqli_query(conectar(),$consultaBarrio);
+	return $Barrio;
+}
+function consultaCiudad(){
+	$consultaCiudad="Select * from ciudad ORDER BY Nombre_Ciudad ASC";
+	$Ciudad=mysqli_query(conectar(),$consultaCiudad);
+	return $Ciudad;
+}
+function consultaProvincia(){
+	$consultaProvincia="Select * from provincia ORDER BY Nombre_Provincia ASC";
+	$Provincia=mysqli_query(conectar(),$consultaProvincia);
+	return $Provincia;
 }
 function selectArea($Dni)
 {

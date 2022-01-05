@@ -39,9 +39,12 @@ mysqli_close(conectar());
 		     <button type="submit" class="botoncito1"><box-icon class="border border-secondary border-3 rounded-circle" name="search-alt" type="solid" size="lg" color="#FAE5D3" animation="tada-hover"></box-icon><?Php if ($Tipo=='A'){
 							echo'Reclamos' ;
 							} else{
-								   echo'Reclamos del &aacuterea'; }?>  </button></form></td>		
+								   echo'Reclamos del &aacuterea'; }?>  </button></form></td>	
+		</tr><tr>						   
 		<td><Form Action="ConsultaCierre.php" Method="Post">
 			 <button type="submit" class="botoncito1"><box-icon class="border border-secondary border-3 rounded-circle" name="power-off" type="solid" size="lg" color="#FAE5D3" animation="tada-hover"></box-icon> Cierre de gestiones </button></form></td>
+			<td><Form Action="#" Method="Post">
+			 <button type="submit" class="botoncito1"><box-icon class="border border-secondary border-3 rounded-circle" name="power-off" type="solid" size="lg" color="#FAE5D3" animation="tada-hover"></box-icon> Alta usuarios </button></form></td>
 		</tr>
         </table>
 

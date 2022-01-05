@@ -1,7 +1,7 @@
 <?php
  require("/includes/ConexionLDQ.php");
  require("/includes/baseDeDatos.php");
- require("/includes/password_mail.php");
+ require("/includes/e_mail.php");
  $idCone=conectar();
  $Mail=$_POST['mail'];
  $Dni=$_REQUEST['dni'];
@@ -33,41 +33,28 @@
 				}
 				else
 					{	
-                     clave_mail($Mail,$codigo);			
-					 $cambio="Update password set Password='$codigo' where Dni='$Dni'";
-					 mysqli_query($idCone,$cambio);
-					 
-					 echo"<font color='white'><center><br>Verifique su e-mail para restablecer su cuenta<br>"	;
+                     clave_mail($Mail,$codigo);	
+                     UpdatePasword($codigo,$Dni);					 
+					 echo"<font color='pink'><center><br>Verifique su e-mail para restablecer su cuenta<br><br>
+					 <a href='IngresoUsuario.html'>Intentar nuevamente</a>";	
 					}
-			}
-			
-		else
-			{ 
-		      $consulta="Select * from personalreclamo where Dni_Personal= '".$Dni."' and Mail_Personal= '".$Mail."'";
-              $resultado=mysqli_num_rows(mysqli_query($idCone,$consulta));
-			 
-			  if ($resultado==0)
+			}else
+			   { 
+		       $resultado=mysqli_num_rows(selectEmpleadoMail($Dni,$Mail));
+			   if ($resultado==0)
 				{
-					echo"<center>";
-					echo"<h2><font color='YELLOW'>¡¡UPS!! <BR> Ingresó un dato incorrecto<h2>";
-					echo"<Form Action='Recuperar.html' Method='Post'>";
-					echo"<input class='buttons' name='Volver' type='submit' value='Intentar Nuevamente'>";
-					echo"</form>";	
+					?><center><br><h1><font color='#FF0000'>&iexcl&iexclUPS!! Ingres&oacute un dato incorrecto...</font><h1>
+					<a href="Recuperar.html"><hr>Intentar nuevamente<hr></a>
+					<?php	
 				}
 			     else
-					{ include("password_mail.php"); 				
-					 $cambio="Update password set Password='$codigo' where Dni='$Dni'";
-					 mysqli_query($idCone,$cambio);
-					 
-					  echo"<font color='white'><center><br>Verifique su e-mail para restablecer su cuenta<br><br>"	;	;
+					{ 	
+				     clave_mail($Mail,$codigo);
+					 UpdatePasword($codigo,$Dni);
+					 echo"<font color='white'><center><br>Verifique su e-mail para restablecer su cuenta<br><br><a href='IngresoUsuario.html'>Intentar nuevamente</a>";
 					}
-					
-			}
+			    }
 			mysqli_close($idCone);
  ?>
-
-        </section>
-        
-		    
-		   
-	</body></main></html>
+</section>
+</body></main></html>
