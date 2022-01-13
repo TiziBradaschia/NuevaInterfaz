@@ -1,0 +1,138 @@
+/** {
+	padding: 0;
+	margin: 0;
+	font-family: century gothic;
+	
+}
+
+body {
+	background-color: #ededed
+}
+
+#form-param {
+	padding: 20px;
+	background-color: #fff;
+	display: flex;
+}
+
+#form-param .container {
+    flex: 2;
+}
+#form-param .buttons {
+	flex: 1;
+}
+
+input {
+	padding: 9px;
+	margin: 6px;
+	width: 42%
+}*/
+
+button{
+	/*width:250px;
+    height:100px;
+	background:/*linear-gradient(white,black);#FAE5D3;*/
+	
+     border: 2px solid grey;
+	border-radius:50px;
+	color:#5b1889;
+	margin-bottom:auto;
+	font-size:20px;
+	font-family:Serif;
+	cursor: hand;
+	border: none;
+	padding: 9px;
+	display: block;
+	margin: 6px
+}
+
+button:first-child {
+	background-color: #48e;
+	color: #fff
+}
+.inicio{
+	background-color:#5b1889;
+}
+.inicio h1 {
+	text-align:center;
+	font-family:Serif;
+	/*height:40px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid;*/
+	font-size:30px;
+	color:#FAE5D3;
+	
+			
+			} 
+.inicio h2 {
+	font-family:Serif;
+	text-align:center;
+	height:40px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid;
+	font-size:25px;
+	color:#b5b5b5;
+	text-decoration:blink;
+	
+			
+			} 
+.inicio h3 {
+	font-family:Serif;
+	text-align:center;
+	
+	margin-bottom: 30px;
+	border-top: 4px solid;
+	border-bottom: 4px solid;
+	font-size:25px;
+	color:white;
+			
+			}
+
+.inicio h4 { 	
+		/*float: right; */
+		text-align:right;
+		/*width: 600px;ancho de la barra pie
+		height: 45px; alto de la barra pie*/
+		/*border: 1px solid #000; 
+		background-color:black;*/ 
+		font-family:Serif;
+	}
+.inicio a { 
+		font-size: 18px;/*tamaño letra menu*/ 
+		color: white;
+		text-decoration: none;
+			
+	} 
+
+.inicio a:hover { 
+			color:#E30052;
+			text-decoration: underline wavy; 
+		}	 
+ 
+.inicio li { 
+		margin-top: 1px; /*margen arriba*/
+		margin-bottom: 5px; /*separacion entre menu*/
+		
+		list-style:none;
+		
+		color: #FFCCFF;
+		
+	} 
+.boton
+{
+	width:250px;
+    height:100px;
+	background:/*linear-gradient(white,black);*/#FAE5D3;
+	
+border: 2px solid grey;
+	border-radius:50px;
+	color:#5b1889;
+	margin-bottom:auto;
+	font-size:20px;
+	font-family:Serif;
+	cursor: hand;
+}
+.boton:hover
+{ background-color:#5b1889/*#D7BDE2*/;
+  color: #FAE5D3	;/*#3e3e3e;*/
+}

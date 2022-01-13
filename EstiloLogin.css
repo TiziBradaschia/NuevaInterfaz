@@ -44,6 +44,25 @@ border: 2px solid grey;
 { background-color:#5b1889/*#D7BDE2*/;
   color: #FAE5D3	;/*#3e3e3e;*/
 }
+.boton
+{
+	width:250px;
+    height:100px;
+	background:/*linear-gradient(white,black);*/#FAE5D3;
+	
+border: 2px solid grey;
+	border-radius:50px;
+	color:#5b1889;
+	margin-bottom:auto;
+	font-size:20px;
+	font-family:Serif;
+	cursor: hand;
+}
+.boton:hover
+{ background-color:#5b1889/*#D7BDE2*/;
+  color: #FAE5D3	;/*#3e3e3e;*/
+}
+
 
 
 .login h1 {

@@ -1,11 +1,5 @@
 <?Php
 			session_start();
-			 if(!isset($_SESSION['Nombre']))
-			  {
-				 echo '<br><center><a Href="IngresoUsuario.html"> Retornar al Ingreso </a>';
-				 die ("<Br><Br><Center><Font Color='#EF280F'><H2>? Usted debe logearse para entrar al sitio !");
-			  }
-			  $Tipo=$_SESSION['Tipo'];
 ?>
 <html lang="es">
 	<head>
@@ -21,6 +15,14 @@
 	 <body>   
     
 		<section class="inicio"><center>
+<?Php
+		   if(!isset($_SESSION['Nombre']))
+			  {
+				 echo '<br><center><a Href="IngresoUsuario.html"> Retornar al Ingreso </a>';
+				 die ("<Br><Br><Center><Font Color='#EF280F'><H1>&iexclUsted debe logearse para entrar al sitio !");
+			  }
+			   $Tipo=$_SESSION['Tipo'];
+?>
 	    <h1 class="text-center fs-1 fw-bolder"><img src="imagenes/L D Q.png" width="150px" height="150px"class="border border-secondary border-1 rounded-circle"> MEN&Uacute <?Php if ($Tipo=='A'){echo' ADMINISTRADOR ';}elseif($Tipo=='E'){echo' PRINCIPAL DE EMPLEADOS ';}else{echo' PRINCIPAL DE CLIENTES ';} ?><img src="imagenes/L D Q.png" width="150px" height="150px"class="border border-secondary border-1 rounded-circle"><hr></h1><br><br>
 		<table>
 		 <tr>
@@ -41,7 +43,7 @@
 						</form></td>
 			            <td></td><td></td>
 					<td>
-					<Form Action="ConsultaCliente.php" Method="Post">
+					<Form Action="MisReclamos.php" Method="Post">
 					<button type="submit" class="botoncito1"><box-icon class="border border-secondary border-3 rounded-circle" name="library" type="solid" size="lg" color="#FAE5D3" animation="tada-hover"></box-icon> Mis Reclamos</button>
 					</form>';} ?>
 				

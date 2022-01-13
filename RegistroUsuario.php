@@ -43,7 +43,7 @@
 		    elseif($resultado1==0)
 		      {?>
 	             <h1><center>Usted no fue dado de alta por el administrador...</h1><br><br>
-			     <center><a Href='contactoAdministrador.html'>Presione Aqu&iacute para contactarlo </a><font color="white">o</font><a Href='RegistroUsuario.html'>Aqu&iacute para intentarlo nuevamente</a>
+			     <center><a Href='ContactoAdministrador.html'>Presione Aqu&iacute para contactarlo </a><font color="white">o</font><a Href='RegistroUsuario.html'>Aqu&iacute para intentarlo nuevamente</a>
 			  <?php
 			  }
 		       elseif($_REQUEST['Clave']!=$_REQUEST['Clave1'])

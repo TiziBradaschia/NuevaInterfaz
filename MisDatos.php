@@ -15,9 +15,9 @@
  </head><br>
  <main class="container alto-100 d-flex justify-content-center align-items-center vh-50 rounded" >
  <body>
-   <section class="login"><center><br>
+   <section class="login"><center>
    <h1 class="text-center fs-1 fw-bolder"><img src="imagenes/L D Q.png" width="150px" height="150px"class="border border-secondary border-1 rounded-circle"> Datos Personales <img src="imagenes/L D Q.png" width="150px" height="150px"class="border border-secondary border-1 rounded-circle"></h1>
-   <form name="Actualizar" method="post" action="ModificarDatosPersonalesBase.php">
+   <form name="Actualizar" method="post" action="ActualizarDatos.php">
 <?php
 	
 	if(!isset($_SESSION['Nombre'])){
@@ -83,19 +83,28 @@
 				 $Provincia=$registros['Nombre_Provincia'];
 				 $Categoria=$registros['Nombre_Categoria'];
 ?>
-		        <div class="input-group mb-1">
+		        <div class="input-group input-group-sm mb-1">
 					<span class="input-group-text"><box-icon class="rounded-circle" name="user-circle" type="solid" size="md" color="#FAE5D3"></box-icon> Nombre y Apellido: </span>
-					<input class="form-control" type="text" name="nombre" value=<?php echo"$Nombre"?> required="requerido"></div>
+					<input class="form-control" type="text" name="Nombre" value=<?php echo"$Nombre"?> required="requerido"></div>
 					<input type="Hidden"name="CNombreAnt" value=<?php echo"$Nombre"?>>
-		     	<div class="input-group mb-1">
+		     	<div class="input-group input-group-sm mb-1">
 					<span class="input-group-text"><box-icon class="rounded-circle" name="id-card" type="solid" size="md" color="#FAE5D3"></box-icon> Dni: </span>
 					<input class="form-control" type="text" name="Dni" value="<?php echo"$Dni"?>" required="requerido" disabled></div>
-				<div class="input-group mb-1">
+				<div class="input-group input-group-sm mb-1">
+					<span class="input-group-text"><box-icon class="rounded-circle" name="phone" type="solid" size="md" color="#FAE5D3"></box-icon> Telefono: </span>
+					<input class="form-control" type="text" name="Telefono" value="<?php echo"$Tel"?>" required="requerido"></div>
+				
+				<div class="input-group input-group-sm mb-1">
 					<span class="input-group-text"><box-icon class="rounded-circle" name="mail-send" type="solid" size="md" color="#FAE5D3"></box-icon> E-mail :</span>
 					<input class="form-control" type="mail" name="Mail" value="<?php echo"$Mail"?>" required="requerido"></div>	
 					<input type="Hidden"name="CMailAnt" value=<?php echo"$Mail"?>>
-				
-				<div class="input-group mb-1">
+				<div class="input-group input-group-sm mb-1">
+					<span class="input-group-text"><box-icon class="rounded-circle" name="medal" type="solid" size="md" color="#FAE5D3"></box-icon> Categoria :</span>
+					<input class="form-control" type="mail" name="Categoria" value="<?php echo"$Categoria"?>" disabled>	</div>
+				<div class="input-group input-group-sm mb-1" >
+					<span class="input-group-text"><box-icon class="rounded-circle" name="home-heart" type="solid" size="md" color="#FAE5D3"></box-icon> Direccion: </span>
+					<input class="form-control" type="text" name="Direccion" value="<?php echo"$Dir"?>" required="requerido"></div>
+				<div class="input-group input-group-sm mb-1">
 					<span class="input-group-text"><box-icon class="rounded-circle" name="home" type="solid" size="md" color="#FAE5D3"></box-icon>  Barrio: </span><Select name='Barrio'>
 				<?php
 				$CBarrio=consultaBarrio();
@@ -163,19 +172,17 @@
 ?>
 			    </Select>
 				<input type="Hidden"name="ProvinciaAnt" value=<?php echo"$Provincia"?>></div>
-				<div class="input-group mb-1">
-					<span class="input-group-text"><box-icon class="rounded-circle" name="medal" type="solid" size="md" color="#FAE5D3"></box-icon> Categoria :</span>
-					<input class="form-control" type="mail" name="Categoria" value="<?php echo"$Categoria"?>" disabled>	</div>
+				
 <?php       }
 mysqli_close($idCone);
 ?>
-<br><br><table align="center" border="0" cellspacing="0" cellpadding="0" width="100%">
-	<tr align="center" valign="center">
+<table align="center" border="0" cellspacing="0" cellpadding="0" width="100%">
+	<tr>
 	  <td>
 	    <button type="submit" class="botoncito1"><box-icon class="border border-secondary border-3 rounded-circle" name="edit-alt" type="solid" size="lg" color="#FAE5D3" animation="tada"></box-icon>  Actualizar</button>
 	   </form></td>
 	  <td>
-	   <Form Action="#" Method="Post">
+	   <Form Action="ActualizarClave.html" Method="Post">
 	     <button type="submit" class="botoncito1"><box-icon class="border border-secondary border-3 rounded-circle" name="key" type="solid" size="lg" color="#FAE5D3" animation="tada-hover"></box-icon> Cambio de clave</button>
 	   </form></td>
 	  <td>
