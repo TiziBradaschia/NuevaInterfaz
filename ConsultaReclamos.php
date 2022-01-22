@@ -29,7 +29,7 @@ session_start();
 <?php
     $date= getdate();
     $hoy=$date['mday']."/".$date['mon']."/".$date['year'];
-	echo "$hoy";
+
     $idCone=conectar();
     $Dni=$_SESSION['Dni'];
 	$Reclamo=$_REQUEST['Reclamo'];
@@ -74,7 +74,7 @@ session_start();
 				<th scope="col"><center><font color="white">OBSERVACIONES
 				<th scope="col"><center><font color="white">ESTADO
 				<th scope="col"><center><font color="white">PROBLEMA
-				<th ><center><font color="white">SEGUIMIENTO
+				<th scope="col"><center><font color="white">SEGUIMIENTO
 				<th scope="col"><center><font color="white">EDICI&OacuteN
 				</tr>
 				</thead>

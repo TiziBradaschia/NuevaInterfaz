@@ -6,6 +6,7 @@ $usuario="root";
 $clave="";
 $BaseDeDato="ldq_bradaschia";
 
+//$BaseDeDato="ldq"; //PARA USARSE para presentar
 $idCone=mysqli_connect($host,$usuario,$clave,$BaseDeDato);
 
 

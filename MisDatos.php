@@ -29,7 +29,7 @@
 	$Nombre=$_SESSION['Nombre'];
 	$Dni=$_SESSION['Dni'];
 	$Tipo=$_SESSION['Tipo'];
-	if($Tipo=="E")
+	if($Tipo=="E"||$Tipo=="A")
 		{
 		$registros=mysqli_fetch_array(consultaEmpleado($Dni)) or die ("Error en consulta de Empleado");
 		$Mail=$registros['Mail_Personal'];

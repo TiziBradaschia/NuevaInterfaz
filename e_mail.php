@@ -45,5 +45,47 @@ if(mail($para, $título, $mensaje, $cabeceras))
 	$enviado=true;
    }
 }
+function cliente_mail($Mail,$DescripcionCierre,$Nombre_Personal,$Nombre_Cliente,$CodReclamo)
+{
+$para=$Mail;
+$DescripcionCierre=$DescripcionCierre;
+$Encargado=$Nombre_Personal;
+$Cliente=$Nombre_Cliente;
+$Cod_Reclamo=$CodReclamo;
+$título = 'Información de su reclamo';
 
+$mensaje = '
+<html>
+
+<body>
+  <div style="text-alingn:center;background-color:#CCC">
+  <h1><center>LIBRO DE QUEJAS<hr></h1>
+  <center>
+  <img src="http://localhost/Proyectos/LDQ/cambios/imagenes/LDQ.png"  width="100" height="100"></img>
+  
+ 
+  <h2>Informaci&oacuten sobre el Reclamo N&deg '.$Cod_Reclamo.' </h2>
+  </center>
+  Estimado/a '.$Nombre_Cliente.':
+  <p><b>Conclusi&oacuten final:</b> '.$DescripcionCierre.'</b></p>
+  
+  
+  <br><br><p>Su Reclamo fue resuelto por:'.$Encargado.'</p>
+  
+  <a href="http://localhost/Proyectos/LDQ_NuevaInterfaz/IngresoUsuario.html">Ingrese aqui para verificar la informaci&oacuten de su reclamo</a>
+  <p><small><text-alingn:right>Si usted no es el imteresado,por favor omitalo</small></p>
+  </div>
+</body>
+</html>
+';
+
+$cabeceras  = 'MIME-Version: 1.0' . "\r\n";
+$cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+
+$enviado=false;
+if(mail($para, $título, $mensaje, $cabeceras))
+{
+    $enviado=true;;
+}
+}
 ?>

@@ -38,7 +38,7 @@
 			        <button type="submit" class="botoncito1"><box-icon class="border border-secondary border-3 rounded-circle" name="library" type="solid" size="lg" color="#FAE5D3" animation="tada-hover"></box-icon> Mis Gestiones</button>
 		            </form>';}
 			    else{
-					echo'<Form Action="Reclamo.php" Method="Post">
+					echo'<Form Action="AltaReclamo.php" Method="Post">
 		                 <button type="submit" class="botoncito1"><box-icon class="border border-secondary border-3 rounded-circle" name="plus" type="solid" size="lg" color="#FAE5D3" animation="tada-hover"></box-icon> Nuevo Reclamo</button>
 						</form></td>
 			            <td></td><td></td>
